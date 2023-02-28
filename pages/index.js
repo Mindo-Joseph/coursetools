@@ -1,23 +1,17 @@
-import {supabase} from './../lib/supabaseClient';
 
-function Page({countries}) {
-    return (<ul> {
-        countries.map((country) => (<li key={
-            country.id
-        }> {
-            country.name
-        }</li>))
-    } </ul>);
+import React from 'react'
+import { useEffect, useState } from 'react'
+import { supabase }  from '../lib/supabaseClient.js'
+
+const index = () => {
+  return (
+    <>
+<h2> This is the homepage </h2>
+
+    </>
+ )
 }
 
-export async function getServerSideProps() {
-    let {data} = await supabase.from('countries').select()
+export default index;
 
-    return {
-        props: {
-            countries: data
-        }
-    }
-}
 
-export default Page;
