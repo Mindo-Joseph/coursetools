@@ -1,17 +1,16 @@
+import Feature from "../components/Feature";
+import Pricing from "../components/Pricing";
+import Hero from "../components/Hero";
+import Layout from "../components/Layout/Layout";
+import SeoHead from "../components/SeoHead";
 
-import React from 'react'
-import { useEffect, useState } from 'react'
-import { supabase }  from '../lib/supabaseClient.js'
-
-const index = () => {
-  return (
-    <>
-<h2> This is the homepage </h2>
-
-    </>
- )
+export default function Home() {
+    return (<>
+        {/* <SeoHead title='LaslesVPN Landing Page'/> */}
+        <Layout>
+            <Hero/>
+            <Feature/>
+            <Pricing/>
+        </Layout>
+    </>);
 }
-
-export default index;
-
-
